@@ -15,15 +15,23 @@
 	<hr>
 
 	<br>
+	
+	<% if current_user %>
 
-	<label> Become a member?</label>
-	<%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-brand' %>
+		<%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-brand' %>
+	<% else %>
+
+		<label> Existing member?</label>
+		<%= link_to 'Log In', new_user_session_path, class: 'btn btn-brand' %>
+		  
+		<br/>
+
+		<label> Become a member?</label>
+		<%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-brand' %>
+
+	<% end %>
 
 	<br>
 
-	<label> Existing member?</label>
-	<%= link_to 'Log In', new_user_session_path, class: 'btn btn-brand' %>
-	  
-	<br/>
 
  </h3>

@@ -45,7 +45,10 @@
             <li><a href="#">Videos</a></li>
             <li><a href="#">Audio Meditations</a></li>
             <li role="separator" class="divider"></li>
-            <li><%= link_to 'Blue Dot Membership', blue_dot_path %></li>
+            <li><%= link_to 'What is Blue Dot?', blue_dot_path %></li>
+            <% if current_user %>
+              <li><%= link_to 'Member Page', blue_dot_main_path %></li>
+            <% end %>
           </ul>
           <li><%= link_to 'Feedback', new_contact_path %></li>
         </li>
