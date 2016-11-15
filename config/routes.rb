@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :contacts
 
+  get '/blue_dot' => 'pages#blue_dot'
   get '/about' => 'pages#about'
   root 'pages#home'
   
