@@ -100,6 +100,44 @@ label {
     cursor: pointer;
 }
 
+.btn-buy {
+    background-color: rgba(66, 134, 244,1); /* light blue */
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(255,255,255,1);
+    color: rgba(255,255,255,1);
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-duration: 1s;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}
+
+.btn-buy:hover {
+    background-color: rgba(255, 255, 255,1); /* white */
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgba(66, 134, 244,1);
+    color: navy;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
 .brand-nav {
 	
 	background: rgba(66, 134, 244,1); /* fallback for old browsers */
@@ -154,6 +192,29 @@ label {
     -webkit-transition-duration: 2s; /* Safari */
     transition-duration: 0.5s;
     cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: rgba(131, 177, 252,1);
+    color: white;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: inherit;
+    line-height: 1.42857143;
+    color: white
+}
+
+.jumbotron {
+    background: rgba(131, 177, 252,.5); 
+    color: white;
+    font-family: inherit;
+    font-weight: 200;
+    line-height: 1.1;
+    letter-spacing: 2px;
 }
 
 .navbar-brand-link {
@@ -211,29 +272,14 @@ label {
     background-color: rgba(131, 177, 252,1);
 }
 
-.jumbotron {
-    background: rgba(131, 177, 252,.5); 
-    color: white;
-    font-family: inherit;
-    font-weight: 200;
-    line-height: 1.1;
-    letter-spacing: 2px;
-
-}
-
-.dropdown-menu {
-    background-color: rgba(131, 177, 252,1);
-    color: white;
-}
-
-.dropdown-menu > li > a {
+.product_img {
     display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: inherit;
-    line-height: 1.42857143;
-    color: white
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
 }
+
 
 @media screen and (max-width: 767px){
    
