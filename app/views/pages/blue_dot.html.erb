@@ -1,14 +1,33 @@
-<div class="jumbotron text-center">
-	<h1>What is <strong>Blue Dot</strong>?</h1>
-</div>
+<div class="brand-well">
 
-<h3 class="brand-well">
+	<h1>What is <strong>Blue Dot</strong>?</h1>
 
 	<p><strong>This is a the section that describes the Blue Dot membership program.</strong></p> <br>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, molestias dolores sunt saepe dolor voluptas tempore minus eum ipsum similique iure commodi, labore nemo reiciendis iste accusamus quasi, architecto eligendi.</p>
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint repellat nisi, ad illo consectetur corporis possimus rem, quo natus corrupti! Voluptates quasi animi sunt minima molestiae eaque iure reiciendis nesciunt!</p>
+	<br>
+	<div class="row text-center sign-up">
+		<h2 style="color: navy;"><strong>Become A Member Today</strong></h2>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-md-6 text-center">
+
+				<h3 style="color: navy;">One Time Payment</h3>
+				<h3><strong>$120</strong></h3>
+				<%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-brand' %>
+			</div>
+			<div class="col-md-6 text-center">
+				<h3 style="color: navy;">12 Monthly Installments</h3>
+				<h3><strong>$10 per month</strong></h3>
+				<%= link_to 'Sign up ', new_user_registration_path, class: 'btn btn-brand' %>
+			</div>
+		</div>
+
+	</div>
 
 	<br>
 
@@ -26,12 +45,9 @@
 		  
 		<br/>
 
-		<label> Become a member?</label>
-		<%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-brand' %>
-
 	<% end %>
 
 	<br>
 
 
- </h3>
+ </div>
