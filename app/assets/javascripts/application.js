@@ -14,3 +14,12 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+
+
+
+// Function to make alerts disappear
+$(function() {
+  setInterval(function(){
+    $('.alert').slideUp(500);
+  }, 5000);
+});
