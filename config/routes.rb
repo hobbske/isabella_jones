@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :contacts
 
   get '/betti_pot' => 'pages#betti_pot'
+  get '/blue_dot_main' => 'pages#blue_dot_main'
   get '/blue_dot' => 'pages#blue_dot'
   get '/about' => 'pages#about'
   root 'pages#home'

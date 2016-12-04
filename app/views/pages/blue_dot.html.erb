@@ -9,47 +9,64 @@
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint repellat nisi, ad illo consectetur corporis possimus rem, quo natus corrupti! Voluptates quasi animi sunt minima molestiae eaque iure reiciendis nesciunt!</p>
 	<br>
 </div>	
-<div class="brand-well">
-	<div class="row text-center sign-up">
-		<h2 style="color: navy;"><strong>Become A Member Today</strong></h2>
+	
 
-		<hr>
 
-		<div class="row">
-			<div class="col-md-6 text-center">
+	<div class="brand-well">
+	<% if current_user %>
+		<div class="row text-center sign-up">
+			<div class="row">
+				<div class="col-md-12 text-center">
 
-				<h4 style="color: navy;"><strong>One Time Payment</strong></h4>
-				<h4><strong>$120</strong></h4>
-				<%= link_to 'Sign up', new_user_registration_path(plan: @bd_annual.id), class: 'btn btn-brand' %>
-			</div>
-			<div class="col-md-6 text-center">
-				<h4 style="color: navy;"><strong>12 Monthly Installments</strong></h4>
-				<h4><strong>$10 per month</strong></h4>
-				<%= link_to 'Sign up ', new_user_registration_path(plan: @bd_monthly.id), class: 'btn btn-brand' %>
+					<h4 style="color: navy;"><strong>You are signed in</strong></h4>
+					<h4><strong>Proceed to members section</strong></h4>
+					<%= link_to 'Members Section', blue_dot_main_path, class: 'btn btn-brand' %>
+				</div>
 			</div>
 		</div>
 
-	</div>
-
-	<br>
-
-	<hr>
-
-	<br>
-	
-	<% if current_user %>
-
-		<%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-brand' %>
 	<% else %>
+		<div class="row text-center sign-up">
+			<h2 style="color: navy;"><strong>Become A Member Today</strong></h2>
 
-		<label> Existing member?</label>
-		<%= link_to 'Log In', new_user_session_path, class: 'btn btn-brand' %>
-		  
-		<br/>
+			<hr>
 
+			<div class="row">
+				<div class="col-md-6 text-center">
+
+					<h4 style="color: navy;"><strong>One Time Payment</strong></h4>
+					<h4><strong>$120</strong></h4>
+					<%= link_to 'Sign up', new_user_registration_path(plan: @bd_annual.id), class: 'btn btn-brand' %>
+				</div>
+				<div class="col-md-6 text-center">
+					<h4 style="color: navy;"><strong>12 Monthly Installments</strong></h4>
+					<h4><strong>$10 per month</strong></h4>
+					<%= link_to 'Sign up ', new_user_registration_path(plan: @bd_monthly.id), class: 'btn btn-brand' %>
+				</div>
+			</div>
+
+		</div>
 	<% end %>
 
-	<br>
+		<br>
+
+		<hr>
+
+		<br>
+		
+		<% if current_user %>
+
+			<%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-brand' %>
+		<% else %>
+
+			<label> Existing member?</label>
+			<%= link_to 'Log In', new_user_session_path, class: 'btn btn-brand' %>
+			  
+			<br/>
+
+		<% end %>
+
+		<br>
 
 
- </div>
+	 </div>
